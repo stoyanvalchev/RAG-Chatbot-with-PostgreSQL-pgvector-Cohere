@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg18-trixie
+    container_name: postgres_rag_task
+    ports:
+      - "2022:5432"
+    environment:
+      POSTGRES_DB: postgres_rag_task
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./init:/docker-entrypoint-initdb.d
+
+volumes:
+  pgdata:
