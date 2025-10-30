@@ -1,3 +1,5 @@
+[![Owner](https://img.shields.io/badge/Owner-stoyanvalchev-emeraldgreen)](https://github.com/stoyanvalchev)
+
 # RAG Chatbot with PostgreSQL + pgvector + Cohere
 
 This project implements a **retrieval-augmented generation (RAG) chatbot** using:
@@ -80,3 +82,4 @@ A reranking function was also implemented to improve the performance of the retr
 ## Conclusion
 
 I found 15 optimal hyperparameter combinations for the model. Based on testing these, I observed that the model tends to cut off its sentences when `max_tokens` is set below 200. For tasks requiring long lists of data, a higher number of retrieved documents consistently improves performance. The number of reranked documents generally aligns with the `top_k` parameter. Overall, the `command-r-08-2024` model outperforms the other one that is made specifically for RAG applications across all tested combinations.
+
